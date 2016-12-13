@@ -1,0 +1,30 @@
+{
+  "name": "StudentCourse",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "created": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Course":{
+      "type": "belongsTo",
+      "model": "Course",
+      "foreignKey": "courseId"
+    },
+    "Student":{
+      "type": "belongsTo",
+      "model": "Student",
+      "foreignKey": "studentId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
